@@ -1,5 +1,11 @@
+import Navbar from "./sections/Navbar";
+
 const App = () => {
-  return <div className="underline text-white">Hello</div>;
+  return (
+    <main className="max-w-7xl mx-auto">
+      <Navbar />
+    </main>
+  );
 };
 
 export default App;
