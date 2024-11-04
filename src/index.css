@@ -47,6 +47,10 @@ body {
     @apply flex gap-4 items-center justify-center cursor-pointer p-3 rounded-md bg-black-300  transition-all active:scale-95 text-white mx-auto;
   }
 
+  .btn_alt {
+    @apply flex gap-4 items-center justify-center cursor-pointer p-3 rounded-md border-2 border-neutral-400  transition-all active:scale-95 text-white mx-auto;
+  }
+
   .btn-ping {
     @apply animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75;
   }
