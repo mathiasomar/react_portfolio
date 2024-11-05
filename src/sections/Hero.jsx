@@ -10,13 +10,14 @@ import { Suspense } from "react";
 // import { Leva, useControls } from "leva";
 import { useMediaQuery } from "react-responsive";
 import { calculateSizes } from "../constants";
-import Target from "../components/Target";
+// import Target from "../components/Target";
 import ReactLogo from "../components/ReactLogo";
-import Cube from "../components/Cube";
+// import Cube from "../components/Cube";
 import RobotPlayground from "../components/RobotPlayground";
 import Rings from "../components/Rings";
 import HeroCamera from "../components/HeroCamera";
 import Button from "../components/Button";
+import cv from "/doc/cv.pdf";
 
 const Hero = () => {
   const isSmall = useMediaQuery({ maxWidth: 440 });
@@ -63,7 +64,7 @@ const Hero = () => {
   //   },
   // });
   return (
-    <section className="min-h-screen w-full flex flex-col relative">
+    <section className="min-h-screen w-full flex flex-col relative" id="home">
       <div className="w-full mx-auto flex flex-col sm:mt-36 mt-20 c-space gap-3">
         <p className="sm:text-3xl text-2xl font-medium text-white text-center font-generalsans">
           Hi, I am Omar <span className="waving-hand">🖐</span>
@@ -100,9 +101,9 @@ const Hero = () => {
             </HeroCamera>
 
             <group>
-              <Target position={sizes.targetPosition} />
+              {/* <Target position={sizes.targetPosition} /> */}
               <ReactLogo position={sizes.reactLogoPosition} />
-              <Cube position={sizes.cubePosition} />
+              {/* <Cube position={sizes.cubePosition} /> */}
               <Rings position={sizes.ringPosition} />
             </group>
 
@@ -112,15 +113,15 @@ const Hero = () => {
         </Canvas>
       </div>
 
-      <div className="absolute bottom-7 left-0 right-0 w-full z-10 c-space flex sm:flex-row items-center justify-center gap-2">
-        <a href="#contact" className="w-fit">
+      <div className="absolute bottom-3 left-0 right-0 w-full z-10 c-space flex sm:flex-row items-center justify-center gap-2">
+        <a href="#about" className="w-fit">
           <Button
-            name="Contact Me"
+            name="Know Me"
             isBeam
             containerClass="sm:w-fit w-full sm:min-w-96 btn"
           />
         </a>
-        <a href="#contact" className="w-fit">
+        <a href={cv} download="omar-cv" rel="noreferrer" className="w-fit">
           <Button
             name="Download CV"
             containerClass="sm:w-fit w-full sm:min-w-96 btn_alt"

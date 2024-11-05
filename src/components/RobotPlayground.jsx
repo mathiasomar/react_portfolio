@@ -7,7 +7,7 @@ const RobotPlayground = (props) => {
   const { nodes, materials, animations } = useGLTF(
     "/models/robot_playground.glb"
   );
-  const { actions, clips } = useAnimations(animations, group);
+  const { actions } = useAnimations(animations, group);
   //   const scroll = useScroll();
 
   useEffect(() => {
