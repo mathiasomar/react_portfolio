@@ -40,7 +40,7 @@ const Projects = () => {
     });
   };
   return (
-    <section className="c-space my-20" id="work">
+    <section className="c-space my-20 overflow-hidden" id="work">
       <p className="head-text">My Work</p>
 
       <motion.div
